@@ -1,0 +1,158 @@
+<html>
+
+<head>
+  <title></title>
+  <style>
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    table a {
+      text-decoration: none;
+    }
+
+    table tr td ul {
+      display: none;
+    }
+
+    table {
+      width: calc(100vmin - 100px);
+      height: calc(100vmin - 100px);
+      margin: 50px;
+    }
+
+    td {
+      text-align: center;
+      background-color: rgb(165, 217, 247);
+    }
+
+    th {
+      background-color: rgb(165, 224, 252);
+      width: 13%;
+    }
+
+    td:hover {
+      position: relative;
+      top: 5px;
+      left: 5px;
+      box-shadow: 9px 13px 18px 0px #756e6e;
+    }
+
+    .open2 {
+      display: block;
+      background: rgb(165, 217, 247);
+    }
+
+    .close2 {
+      display: none;
+    }
+  </style>
+  <script>
+
+  </script>
+  <script>
+    function list1(node) {
+      var nodes = node.parentNode;
+      var nn = nodes.getElementsByTagName("ul")[0];
+      var mm = document.getElementById("menuid");
+      var names = mm.getElementsByTagName("ul");
+
+      for (var x = 0; x < names.length; x++) {
+        if (names[x] == nn && names[x].className != "open2") {
+          nn.className = "open2";
+        } else {
+          names[x].className = "close2";
+        }
+      }
+    } 
+  </script>
+</head>
+
+<body>
+  <table id="menuid">
+    <tr>
+      <th> <a>节次</a> </th>
+      <th> <a>星期一</a> </th>
+      <th> <a>星期二</a> </th>
+      <th> <a>星期三</a> </th>
+      <th> <a>星期四</a> </th>
+      <th> <a>星期五</a> </th>
+    </tr>
+
+    <tr>
+      <th> <a>第一大节</a> </th>
+      <td> <a></a> </td>
+      <td>
+        <a href="javascript:void(0)" onclick="list1(this)">大学英语四级</a>
+        <ul>
+          <li>第一公共教学楼C211</li>
+        </ul>
+      </td>
+      <td> <a></a> </td>
+      <td> <a></a> </td>
+      <td>
+        <a href="javascript:void(0)" onclick="list1(this)">大学英语四级</a>
+        <ul>
+          <li>第一公共教学楼C211</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr>
+      <th> <a>第二大节</a> </th>
+      <td> <a></a> </td>
+      <td>
+        <a href="javascript:void(0)" onclick="list1(this)">管理科学基础</a>
+        <ul>
+          <li>第一公共教学楼C411</li>
+        </ul>
+      </td>
+      <td> <a></a> </td>
+      <td>
+        <a href="javascript:void(0)" onclick="list1(this)">管理科学基础</a>
+        <ul>
+          <li>第一公共教学楼C411</li>
+        </ul>
+      </td>
+      <td> <a></a> </td>
+    </tr>
+
+    <tr>
+      <th> <a>第三大节</a> </th>
+      <td> <a></a> </td>
+      <td> <a></a> </td>
+      <td>
+        <a href="javascript:void(0)" onclick="list1(this)">会计学</a>
+        <ul>
+          <li>第一公共教学楼B101</li>
+        </ul>
+      </td>
+      <td> <a></a> </td>
+      <td> <a></a> </td>
+    </tr>
+
+    <tr>
+      <th> <a>第四大节</a> </th>
+      <td>
+        <a href="javascript:void(0)" onclick="list1(this)">电子商务</a>
+        <ul>
+          <li>第一公共教学楼B303</li>
+        </ul>
+      </td>
+      <td> <a></a> </td>
+      <td> <a></a> </td>
+      <td>
+        <a href="javascript:void(0)" onclick="list1(this)">会计学</a>
+        <ul>
+          <li>第一公共教学楼B101</li>
+        </ul>
+      </td>
+      <td> <a></a> </td>
+    </tr>
+
+  </table>
+</body>
+
+</html>
